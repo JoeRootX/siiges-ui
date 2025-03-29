@@ -17,11 +17,18 @@ export default function UserForm({
   return (
     <Grid container justifyContent={justifyContent} spacing={2}>
       <Grid item>
+<<<<<<< HEAD
         <ButtonSimple
           design="cancel"
           onClick={cancel}
           text={cancelButtonText}
         />
+=======
+        <ButtonUnstyled className="buttonAdd cancel" onClick={cancel}>
+<<<<<<< HEAD
+          <Typography variant="body1">Cancelar</Typography>
+        </ButtonUnstyled>
+>>>>>>> 1617d30d4888be4d0af71af3bf3c3188d16c7e6b
       </Grid>
       {!confirmDisabled && (
         <Grid item>

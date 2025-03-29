@@ -1,9 +1,14 @@
 import { Grid, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import React, {
   useContext, useState, useEffect, useMemo,
 } from 'react';
 import { DataTable } from '@siiges-ui/shared';
+=======
+import { Button } from '@siiges-ui/shared';
+import React, { useContext, useState, useEffect, useMemo } from 'react';
+>>>>>>> 1617d30d4888be4d0af71af3bf3c3188d16c7e6b
 import columns from './Mocks/AsignaturasFormacionElectiva';
 import { TablesPlanEstudiosContext } from '../utils/Context/tablesPlanEstudiosProviderContext';
 import AsignaturasFormacionCreateModal from '../utils/Components/AsignaturasFormacionModales/AsignaturasFormacionCreateModal';
@@ -26,6 +31,7 @@ export default function AsignaturasFormacionElectiva({ disabled, type }) {
 
   const isDisabled = disabled || isSectionDisabled;
 
+<<<<<<< HEAD
   const { asignaturasFormacion, asignaturasTotal, loading } = type === 'editar' || type === 'consultar'
     ? useAsignaturas(programaId)
     : { asignaturasFormacion: [], loading: false };
@@ -33,6 +39,16 @@ export default function AsignaturasFormacionElectiva({ disabled, type }) {
   const tableColumns = useMemo(
     () => columns(isDisabled, type),
     [setAsignaturasFormacionList, asignaturasFormacion, isDisabled],
+=======
+  const { asignaturasFormacion, asignaturasTotal, loading } =
+    type === 'editar'
+      ? useAsignaturas(programaId)
+      : { asignaturasFormacion: [], loading: false };
+
+  const tableColumns = useMemo(
+    () => columns(setAsignaturasFormacionList, asignaturasFormacionList),
+    [setAsignaturasFormacionList, asignaturasFormacion]
+>>>>>>> 1617d30d4888be4d0af71af3bf3c3188d16c7e6b
   );
 
   useEffect(() => {
