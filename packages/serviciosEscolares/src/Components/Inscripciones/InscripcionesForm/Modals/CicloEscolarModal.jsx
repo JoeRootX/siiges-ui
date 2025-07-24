@@ -59,6 +59,7 @@ export default function CicloEscolarModal({
     { id: 29, nombre: '2024B' },
     { id: 30, nombre: '2024C' },
     { id: 31, nombre: '2025A' },
+    { id: 32, nombre: '2025B' },
   ];
 
   const handleFormCicloOnChange = (event) => {
